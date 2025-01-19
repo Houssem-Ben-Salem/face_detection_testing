@@ -2,6 +2,8 @@
 
 Une plateforme complète pour évaluer et comparer différents algorithmes de détection de visages sous diverses conditions.
 
+![image](https://github.com/user-attachments/assets/7fb16a19-2f04-4c38-8859-8fbffb8de0f0)
+
 ## Auteurs
 - Ben Salem Houssem
 - Sauvé Catherine
