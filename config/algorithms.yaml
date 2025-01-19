@@ -41,6 +41,6 @@ algorithms:
     name: "YOLOv8-Face"
     type: "object_detection"
     parameters:
-      model_path: "algorithms/object_detection/yolov8m-face.pt"  # Path to your custom model
+      model_path: "algorithms/object_detection/yolov8m-face.pt"
       conf_thresh: 0.25  # Confidence threshold
       iou_thresh: 0.45   # NMS IOU threshold
