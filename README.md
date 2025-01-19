@@ -85,7 +85,7 @@ face_detection_testing/
 │       └── yolo.py
 └── utils/
     ├── variations.py      # Pose and lighting variations
-    └── metrics.py         # Performance metrics
+    └── __init__.py
 ```
 
 ## Usage
@@ -123,10 +123,6 @@ Each algorithm is rated on various aspects with detailed explanations of their s
 - GPU acceleration is available for supported algorithms
 - Memory usage varies significantly between algorithms
 - Processing speed depends on the selected algorithm and input resolution
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
