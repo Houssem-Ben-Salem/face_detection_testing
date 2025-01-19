@@ -40,16 +40,14 @@ This project provides a user-friendly interface for testing and comparing variou
 - Real-time webcam testing
 - Video file processing
 - Side-by-side comparison view
-- Performance optimization with frame skipping
 - Comprehensive algorithm reference guide
-- Multi-threaded processing with frame buffering
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/face-detection-testing.git
-cd face-detection-testing
+git clone https://github.com/Houssem-Ben-Salem/face_detection_testing.git
+cd face_detection_testing
 ```
 
 2. Create and activate a virtual environment:
@@ -123,14 +121,6 @@ Each algorithm is rated on various aspects with detailed explanations of their s
 - GPU acceleration is available for supported algorithms
 - Memory usage varies significantly between algorithms
 - Processing speed depends on the selected algorithm and input resolution
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## License
 
