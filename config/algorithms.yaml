@@ -1,0 +1,46 @@
+algorithms:
+  viola_jones:
+    name: "Viola-Jones (Haar Cascades)"
+    type: "traditional"
+    parameters:
+      cascade_path: "haarcascade_frontalface_default.xml"
+      scale_factor: 1.1
+      min_neighbors: 5
+      min_size: [30, 30]
+  
+  hog_svm:
+    name: "HOG + SVM (DLib)"
+    type: "traditional"
+    parameters:
+      upsampling_layers: 1
+      
+  mtcnn:
+    name: "MTCNN"
+    type: "ml_based"
+    parameters:
+      min_face_size: 20
+      thresholds: [0.5, 0.6, 0.6]
+      margin: 0
+
+  mediapipe:
+    name: "MediaPipe Face"
+    type: "ml_based"
+    parameters:
+      model_selection: 0  # 0 for short-range, 1 for full-range
+      min_detection_confidence: 0.5
+
+  retinaface:
+    name: "RetinaFace"
+    type: "ml_based"
+    parameters:
+      model: "buffalo_l"
+      det_thresh: 0.4
+      min_face_size: 20
+
+  yolov8_face:
+    name: "YOLOv8-Face"
+    type: "object_detection"
+    parameters:
+      model_path: "algorithms/object_detection/yolov8m-face.pt"  # Path to your custom model
+      conf_thresh: 0.25  # Confidence threshold
+      iou_thresh: 0.45   # NMS IOU threshold
