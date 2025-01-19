@@ -2,6 +2,8 @@
 
 A comprehensive testing platform for evaluating and comparing different face detection algorithms under various conditions.
 
+![image](https://github.com/user-attachments/assets/7fb16a19-2f04-4c38-8859-8fbffb8de0f0)
+
 ## Authors
 - Ben Salem Houssem
 - Sauvé Catherine
