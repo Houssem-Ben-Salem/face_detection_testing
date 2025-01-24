@@ -1,8 +1,9 @@
 # Face Detection Algorithm Testing Suite
 
 A comprehensive platform for evaluating and comparing face detection algorithms under various conditions and perturbations.
+![image](https://github.com/user-attachments/assets/b11c4f46-3cb0-496d-b61e-84d660f68ff7)
 
-![image](https://github.com/user-attachments/assets/7fb16a19-2f04-4c38-8859-8fbffb8de0f0)
+![image](https://github.com/user-attachments/assets/d920552e-b241-4b16-a69a-43541e5532fe)
 
 ## Authors
 - Ben Salem Houssem
