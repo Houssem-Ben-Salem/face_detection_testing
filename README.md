@@ -1,6 +1,6 @@
 # Face Detection Algorithm Testing Suite
 
-A comprehensive testing platform for evaluating and comparing different face detection algorithms under various conditions.
+A comprehensive platform for evaluating and comparing face detection algorithms under various conditions and perturbations.
 
 ![image](https://github.com/user-attachments/assets/7fb16a19-2f04-4c38-8859-8fbffb8de0f0)
 
@@ -10,11 +10,11 @@ A comprehensive testing platform for evaluating and comparing different face det
 
 ## Overview
 
-This project provides a user-friendly interface for testing and comparing various face detection algorithms under different conditions. It includes both traditional and modern deep learning-based approaches, allowing users to evaluate algorithm performance across different scenarios such as pose variations and lighting conditions.
+An interactive testing environment for evaluating face detection algorithms across different scenarios, variations, and perturbations. Supports both traditional and modern deep learning-based approaches.
 
 ## Features
 
-### Implemented Algorithms
+### Algorithms
 1. Traditional Methods
    - Viola-Jones (OpenCV Haar Cascades)
    - HOG + SVM (DLib implementation)
@@ -28,20 +28,28 @@ This project provides a user-friendly interface for testing and comparing variou
    - YOLOv8 (with custom face detection model)
 
 ### Testing Conditions
-- **Pose Variations**
-  - Yaw: -90° to +90°
-  - Pitch: -45° to +45°
-  - Roll: -30° to +30°
 
-- **Lighting Conditions**
-  - Illumination: 1-1000 lux
-  - Direction: Multi-directional
-  - Color temperature: 2000K-7000K
+#### Pose Variations
+- Yaw: -90° to +90°
+- Pitch: -45° to +45°
+- Roll: -30° to +30°
 
-### Key Features
+#### Lighting Conditions
+- Brightness: 0-200% adjustment
+- Contrast: 0-200% adjustment
+- Color temperature: 2000K-7000K
+
+#### Environmental Perturbations
+- Gaussian Noise: Adjustable intensity
+- Snow Effect: Variable density
+- Custom variations combining multiple effects
+
+### Interface Features
 - Real-time webcam testing
-- Video file processing
+- Video file processing with progress tracking
+- Frame capture with detection comparison
 - Side-by-side comparison view
+- Performance optimization settings
 - Comprehensive algorithm reference guide
 
 ## Installation
@@ -68,12 +76,12 @@ pip install -r requirements.txt
 face_detection_testing/
 ├── app.py                 # Main Gradio application
 ├── algorithm_reference.py # Algorithm comparison reference
-├── requirements.txt       # Project dependencies
+├── requirements.txt      # Project dependencies
 ├── config/
-│   └── algorithms.yaml    # Algorithm configurations
+│   └── algorithms.yaml   # Algorithm configurations
 ├── algorithms/
 │   ├── __init__.py
-│   ├── base.py           # Base algorithm class
+│   ├── base.py          # Base algorithm class
 │   ├── traditional/
 │   │   ├── viola_jones.py
 │   │   └── hog_svm.py
@@ -84,7 +92,7 @@ face_detection_testing/
 │   └── object_detection/
 │       └── yolo.py
 └── utils/
-    ├── variations.py      # Pose and lighting variations
+    ├── variations.py     # Pose, lighting, and perturbation variations
     └── __init__.py
 ```
 
@@ -95,47 +103,64 @@ face_detection_testing/
 python app.py
 ```
 
-2. Open your web browser and navigate to:
+2. Access interface:
 ```
 http://localhost:7860
 ```
 
-3. Select desired options:
-   - Choose an algorithm from the dropdown menu
-   - Select input method (webcam or video upload)
-   - Apply variations if desired
-   - Adjust performance settings as needed
+3. Interface Options:
+   - Select input (webcam/video)
+   - Choose detection algorithm
+   - Apply variations/perturbations
+   - Adjust performance settings
+   - Capture and compare frames
+   - Process videos with progress tracking
+
+## New Features
+
+### Frame Capture
+- Capture current frame during detection
+- View original and processed versions
+- Compare detection results
+
+### Video Processing
+- Upload and process video files
+- Real-time progress tracking
+- Save processed output
+
+### Environmental Perturbations
+- Gaussian noise with adjustable intensity
+- Snow effect with variable density
+- Combine with pose/lighting variations
+
+## Performance Optimization
+
+- Adjustable frame skip rate
+- GPU acceleration for supported algorithms
+- Memory usage optimization
+- Processing speed vs. quality settings
 
 ## Algorithm Comparison
 
-The application includes a comprehensive reference guide comparing algorithms across multiple dimensions:
-- Pose Variations Support
-- Lighting Conditions Handling
-- Occlusion Support
-- Performance Characteristics
-- Special Features
-
-Each algorithm is rated on various aspects with detailed explanations of their strengths and limitations.
-
-## Performance Considerations
-
-- Frame skipping can be adjusted to optimize performance
-- GPU acceleration is available for supported algorithms
-- Memory usage varies significantly between algorithms
-- Processing speed depends on the selected algorithm and input resolution
+Comprehensive reference guide comparing:
+- Pose variation handling
+- Lighting condition adaptation
+- Perturbation resistance
+- Processing speed
+- Memory usage
+- Special features
 
 ## Acknowledgments
 
-- OpenCV team for Viola-Jones implementation
-- DLib developers for HOG+SVM implementation
-- Google for MediaPipe framework
-- InsightFace team for RetinaFace implementation
-- Ultralytics for YOLOv8
-- All other open-source contributors
+- OpenCV team (Viola-Jones)
+- DLib developers (HOG+SVM)
+- Google (MediaPipe)
+- InsightFace team (RetinaFace)
+- Ultralytics (YOLOv8)
+- Open-source contributors
 
 ## Citation
 
-If you use this project in your research, please cite:
 ```
 @software{face_detection_testing,
   author = {Ben Salem, Houssem and Sauvé, Catherine},
@@ -143,4 +168,3 @@ If you use this project in your research, please cite:
   year = {2025},
   url = {https://github.com/yourusername/face-detection-testing}
 }
-```
